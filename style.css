@@ -50,7 +50,7 @@ button {
   background-color: var(--teal);
   color: white;
   font-size: 14px;
-  margin-bottom: 30px;
+  margin-top: 30px;
 
   /* transition: 1000ms transform; */
 }
