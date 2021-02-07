@@ -46,7 +46,7 @@ h1 {
 button {
   padding: 5px 10px;
   border: none;
-  border-radius: 5px;
+  border-radius: 50px;
   background-color: var(--teal);
   color: white;
   font-size: 14px;

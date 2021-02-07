@@ -8,14 +8,14 @@ const pixel = document.getElementById("pixel");
 
 // StartState ///////////////////////////////////////////////
 function startState() {
-  createGrid(1600);
+  createGrid(3000);
 
-  container.style.backgroundColor = "grey";
+  // container.style.backgroundColor = "grey";
 }
 
 clrButton.addEventListener("click", startState);
 
-// grid board creater /////////////////////////////////////////
+// grid board creater w/ eventlistners /////////////////////////////////////
 createGrid = (number) => {
   for (let i = 0; i < number; i++) {
     const div = document.createElement("div");
