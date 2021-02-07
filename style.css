@@ -1,38 +1,26 @@
+:root {
+  --teal: rgb(56, 106, 106);
+}
 body {
   margin: 0px;
-}
 
-.container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    width: 100vw;
-    height: 100vh;
-    max-width: 100%;
-    max-height: 100%;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  background-color: darkcyan;
 }
-
-#screen {
-    width: 80vw;
-    height: 80vh;
-    background-color: lightgrey;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.pixel {
-    border: 1px solid black;
-    background-color: white;
-    height: 1vh;
-    width: 1vh;
-}
-
-.colored-in {
-    background-color: black;    
-}
-
 
 #clear-screen-button:hover {
-    cursor: pointer;
+  cursor: pointer;
+}
+
+button {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--teal);
+  color: rgb(147, 187, 199);
+  font-size: 14px;
+}
+h1 {
+  font-size: 54px;
 }
