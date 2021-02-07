@@ -4,28 +4,37 @@
 /* Game Logic Variables and State */
 let divCount = 0
 /* DOM References */
-//const pixelTarget = document.querySelectorAll(".pixel");
-const screenTarget = document.querySelector("#screen");
+let pixelEls = [];
+const buttonEl = document.querySelector("#clear-screen-button");
+const screenEl = document.querySelector("#screen");
 /* Functions and Game Logic */
 const createDiv = () => {
    const pix = document.createElement("div");
    pix.classList.add("pixel");
    pix.addEventListener("mouseover", colorize);
-   screenTarget.append(pix);
+   screenEl.append(pix);
 };
 const fillScreen = () =>{
-    for (i = 0; i < 3000; i++) {
-       createDiv();
-        divCount++;
-    }
-   };
-   let colorize = (event)=>{
-      console.log("help")
-      event.target.classList.add("colored-in")
+   for (i = 0; i < 3000; i++) {
+      createDiv();
+      divCount++;
+   }
+};
+let clearButton = () => {
+   console.log(pixelEls)
+   for (pixel of pixelEls){
+   pixel.classList.remove("colored-in");
+}
+}
+let colorize = (event)=>{
+   //console.log("help")
+   event.target.classList.add("colored-in")
+   pixelEls = document.querySelectorAll(".colored-in")
+   buttonEl.addEventListener("click", clearButton);
    }
 fillScreen();
 /* Event Listeners */
-
+//buttonEl.addEventListener("click", clearButton);
    // event.target.pixel
    // pixel.style.backgroundColor = "black";}
 //  
