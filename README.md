@@ -13,7 +13,7 @@ You will primarily be adding code to index.js, but if you think something you ne
 
 ### Step 1: making 1 pixel work
 
-![Just One Pixel](assets/one-pixel.gif)
+![Just one Pixel](assets/one-pixel.gif)
 
 Note that there's already 1 pixel in the screen div. It's already styled to look like a pixel. Eventually, we will fill the screen up with pixels, but first, we should make just this 1 pixel function correctly. Our goal is to make this pixel turn black when the mouse hovers over it.
 - Tools you already have that will help: `addEventListener`, `<anyDomElement>.classList.add`
