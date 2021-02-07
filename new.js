@@ -1,11 +1,12 @@
 console.log("hello");
 
-// Variables
+// Variables ////////////////////////////////////////////////
 const container = document.getElementById("container");
 
 const clrButton = document.getElementById("clrscreen");
 const pixel = document.getElementById("pixel");
 
+// StartState ///////////////////////////////////////////////
 function startState() {
   createGrid(1600);
 
@@ -14,7 +15,7 @@ function startState() {
 
 clrButton.addEventListener("click", startState);
 
-// grid creater
+// grid board creater /////////////////////////////////////////
 createGrid = (number) => {
   for (let i = 0; i < number; i++) {
     const div = document.createElement("div");
@@ -42,6 +43,7 @@ createGrid = (number) => {
 
 createGrid(3000);
 
+// etch functionality //////////////////////////////
 function changeColor(e) {
   // console.log(e.target, "test");
   e.target.style.backgroundColor = "rgb(105, 104, 104)";
