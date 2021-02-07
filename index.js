@@ -1,15 +1,12 @@
-
-/* DOM References */
-let container = document.querySelector('.container')
 let pixel = document.querySelector('.pixel')
 let screen = document.querySelector('#screen')
-/* Functions and Game Logic */
+let clearButton = document.querySelector('#clear-screen-button')
+
 
 // changes color of pixel when mouse enters
-pixel.addEventListener('mouseenter', entering);
 
 function entering(e) {
-    pixel.classList.add('colored-in');
+    e.currentTarget.classList.add('colored-in');
     e.currentTarget.style.background = '';
     console.log('mouseenter');
 }
@@ -32,17 +29,30 @@ function fillScreen() {
         // return filledPixel;
 
         let div = document.createElement('div');
-        let childPixel = document.createElement('pixel');
-        div.appendChild(childPixel)
+        div.className = "pixel";
 
-        screen.append(div)
+        // div.appendChild(childPixel)
+        div.addEventListener('mouseenter', entering);
 
+        screen.appendChild(div);
     }
 
 }
 
+const clear = e => {
 
-/* Event Listeners */
+    for (div of screen.children) {
+        div.classList.remove('colored-in')
+    }
+
+    // let button = document.querySelector('#clear-screen-button');
+    //     button.addEventListener('click', () => {
+    //         let clearScreen = document.querySelectorAll('.pixel');
+    //         clearScreen.classList.remove('colored-in')
+    // }
+
+}
+
 document.addEventListener('DOMContentLoaded', fillScreen);
-// document.addEventListener('clear-screen-button', clear);
+document.addEventListener('click', clear);
 
