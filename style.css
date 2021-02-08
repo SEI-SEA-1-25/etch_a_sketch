@@ -16,7 +16,8 @@ body {
 #screen {
     width: 80vw;
     height: 80vh;
-    background-color: lightgrey;
+    background-image: url(https://static.boredpanda.com/blog/wp-content/uploads/2017/12/etch-a-sketch-artist-creates-mind-blowing-works-by-simply-turning-the-dials-coverimage-5a43b06133656__880.jpg);
+    background-size: cover;
     display: flex;
     flex-wrap: wrap;
 }
@@ -29,7 +30,8 @@ body {
 }
 
 .colored-in {
-    background-color: black;    
+    border: .1px solid rgb(100, 100, 100, .0);
+    background-color: rgb(100, 100, 100, .0);    
 }
 
 
