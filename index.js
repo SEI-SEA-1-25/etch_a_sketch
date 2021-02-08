@@ -1,22 +1,18 @@
 // Seecting the DOM
 let screen = document.querySelector("#screen");
+let numOfPix = document.querySelectorAll(".glass");
 let pixel = document.querySelector("#onepix");
 let newDiv;
-let drawing = true;
-let x = 0;
 
 
 
 // EventListeners
 
-//Change bg color of one pixel
-pixel.addEventListener("mouseenter", ()=> {
-    pixel.classList.add("colored-in");
-});
-
-
-//Functions
 function mouseEv(){
+    pixel.addEventListener("mouseenter", ()=> {
+        pixel.classList.add("colored-in");
+    });
+
     screen.addEventListener('mousemove', (e)=>{
         newDiv = document.createElement("div");
         newDiv.setAttribute("class", "pixel");
@@ -28,6 +24,10 @@ function mouseEv(){
 }
 mouseEv();
 
+
+//Functions and Loops
+
+// clearing the DOM
 function clearButton(){
     let clear = document.querySelector("#clear-screen-button");
     clear.addEventListener("click", (e)=>{
