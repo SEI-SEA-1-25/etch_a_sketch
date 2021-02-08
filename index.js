@@ -14,16 +14,18 @@ pixel.addEventListener("mouseenter", ()=> {
 
 //Functions
 function mouseEv(){
-    screen.addEventListener('mouseenter', ()=>{
+    screen.addEventListener('mouseover', (e)=>{
         newDiv = document.createElement("div");
         newDiv.setAttribute("class", "pixel");
+        newDiv.classList.add("colored-in")
         screen.append(newDiv);
-        newDiv.addEventListener('mouseover', (e)=>{
-            newDiv.classList.add("colored-in")
-            console.log(e.target);
-            // let theBunch = document.querySelectorAll(".pixel");
-            // console.log(theBunch[1]).style.backgroundColor = "#000000";
-        })
+        // newDiv.addEventListener('mouseover', (e)=>{
+        //     newDiv = document.createElement("div");
+        //     newDiv.setAttribute("class", "pixel");
+        //     screen.append(newDiv);
+        //     newDiv.classList.add("colored-in")
+        //     console.log(e.target);
+        // })
     });
 }
 mouseEv();
