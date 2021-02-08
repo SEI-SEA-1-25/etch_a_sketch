@@ -2,6 +2,9 @@
 let screen = document.querySelector("#screen");
 let pixel = document.querySelector("#onepix");
 let newDiv;
+let drawing = true;
+let x = 0;
+
 
 
 // EventListeners
@@ -14,7 +17,7 @@ pixel.addEventListener("mouseenter", ()=> {
 
 //Functions
 function mouseEv(){
-    screen.addEventListener('mouseover', (e)=>{
+    screen.addEventListener('mousemove', (e)=>{
         newDiv = document.createElement("div");
         newDiv.setAttribute("class", "pixel");
         newDiv.classList.add("colored-in")
