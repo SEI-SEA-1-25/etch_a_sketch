@@ -23,13 +23,16 @@ body {
 
 .pixel {
     border: 1px solid black;
-    background-color: white;
+    background-color: lightgrey;
     height: 1vh;
     width: 1vh;
 }
 
 .colored-in {
-    background-color: black;    
+    border: 1px solid black;
+    background-color: black;
+    height: 1vh;
+    width: 1vh;    
 }
 
 
