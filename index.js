@@ -19,13 +19,8 @@ function mouseEv(){
         newDiv.setAttribute("class", "pixel");
         newDiv.classList.add("colored-in")
         screen.append(newDiv);
-        // newDiv.addEventListener('mouseover', (e)=>{
-        //     newDiv = document.createElement("div");
-        //     newDiv.setAttribute("class", "pixel");
-        //     screen.append(newDiv);
-        //     newDiv.classList.add("colored-in")
-        //     console.log(e.target);
-        // })
+        evEl = e.target;
+        evEl.classList.add("colored-in");
     });
 }
 mouseEv();
