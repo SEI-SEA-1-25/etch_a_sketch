@@ -18,8 +18,9 @@ function mouseEv(){
         newDiv = document.createElement("div");
         newDiv.setAttribute("class", "pixel");
         screen.append(newDiv);
-        newDiv.addEventListener('mouseenter', (e)=>{
-            console.log(e);
+        newDiv.addEventListener('mouseover', (e)=>{
+            newDiv.classList.add("colored-in")
+            console.log(e.target);
             // let theBunch = document.querySelectorAll(".pixel");
             // console.log(theBunch[1]).style.backgroundColor = "#000000";
         })
