@@ -2,7 +2,7 @@ console.log("I'm linked")
 
 //State Variables
 let pixelCount = 17249
-// let coloredPixel = null;
+let coloredPixel = null;
 //DOM References
 let screenEl = document.querySelector('#screen');
 let buttonEl = document.getElementById("clear-screen-button")
@@ -20,20 +20,24 @@ function pixelRepeater (addPixels, pixelCount, event) {
     //     event.currentTarget.classlist.add('colored-in')
     // })
 
-    
     for(let i = 0; i < pixelCount; i++){
         addPixels ();
         let pixelEl = document.querySelectorAll('.pixel');
         pixelEl[i].addEventListener('mouseenter', event => {
-            let coloredPixel = event.currentTarget.classList.add('colored-in')
+            event.currentTarget.classList.add('colored-in')
+            event.currentTarget.setAttribute('id','user-colored-in')
             coloredPixel++
+
+        
+
             // resetBoard (coloredPixel)
             // clearScreen(coloredPixel)
-            // console.log(coloredPixel)
+            console.log(coloredPixel)
         })
         
     }
 }
+
 
 
 function addPixels() {
@@ -51,9 +55,9 @@ function addPixels() {
 
 function clearScreen () {
     for(let i = 0; i < pixelCount; i++) {
-        let pixelEl = document.querySelectorAll('.pixel')
-        pixelEl[i].classList.remove("colored-in")
-        console.log("button is working!")
+        let pixelEl = document.querySelectorAll('#user-colored-in')
+        pixelEl[i].classList.remove('colored-in')
+        // console.log("button is working!")
     }
 }
 
