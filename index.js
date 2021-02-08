@@ -27,4 +27,11 @@ function mouseEv(){
     });
 }
 mouseEv();
-// console.log(mouseEv())
+
+function clearButton(){
+    let clear = document.querySelector("#clear-screen-button");
+    clear.addEventListener("click", (e)=>{
+        document.getElementById("screen").innerHTML = " ";
+    });
+}
+clearButton();
