@@ -7,7 +7,7 @@
 ### Instructions
 We're going to build a virtual etch-a-sketch in the browser! Explore the existing html, css, and js code in the etch_a_sketch directory.
 
-![Final product](assets/sketch-finished-product.gif)
+![Final product](assets/sketch-finished-prodçuct.gif)
 
 You will primarily be adding code to index.js, but if you think something you need is missing from index.html or style.css, you can add it.
 
