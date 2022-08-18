@@ -1,29 +1,41 @@
-const pixel = document.getElementsByClassName('pixel')
-const screen = document.getElementById('screen')
-const container = document.getElementsByClassName("container")
+let screen = document.querySelector('#screen')
+let pixel = document.querySelector('.pixel')
+
+let thepixel = document.getElementsByClassName('.pixel')
 const btn = document.getElementById('clear-screen-button')
 
-const makePixel = function(){
- for (let i = 0; i <= 5588; i++) {
-        // create the new DOM element
-        const div = document.createElement('div')
-        screen.appendChild(div).className = 'pixel'
-        // append the new element
-        document.querySelector('#screen').appendChild(div)
- }
-}
-makePixel()
-const blackPixel = document.querySelector('.pixel')
-blackPixel.addEventListener("mouseenter", function(){
- blackPixel.style.backgroundColor = "black";
-})
-    blackPixel.addEventListener("mouseleave", function(){
-     blackPixel.style.backgroundColor = "gray"
- })
 
-btn.addEventListener("click", function(e) {
-    blackPixel.style.backgroundColor = ""
+// blackPixel.addEventListener("mouseenter", function(){
+//     const blackPixel = document.querySelector('.pixel')
+//  blackPixel.style.backgroundColor = "black";
+// })
+//     blackPixel.addEventListener("mouseleave", function(){
+//      blackPixel.style.backgroundColor = "gray"
+//  })
+pixel.addEventListener('mouseenter', function(e){
+    pixel.classList.add('colored-in')
 })
+
+for (let i = 0; i < 7423; i++){
+    let div = document.createElement('div')
+    div.classList.add('pixel')
+    div.addEventListener('mouseenter', function(e){
+        e.target.classList.add('colored-in')
+       
+    })
+    screen.append(div)
+}
+
+btn.addEventListener("click", function(e){
+    let everyPixel = document.querySelectorAll('.pixel')
+    for (let i = 0; everyPixel.length; i++){
+        everyPixel[i].classList.remove('colored-in')
+    }
+})
+
+// btn.addEventListener("click", function(e) {
+//     pixel.style.backgroundColor = ""
+// })
 
 
 // //make the pixel turn black
